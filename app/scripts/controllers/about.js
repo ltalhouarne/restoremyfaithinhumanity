@@ -2,16 +2,11 @@
 
 /**
  * @ngdoc function
- * @name restoremyfaithinhumanityApp.controller:AboutCtrl
+ * @name restoremyfaithinhumanityApp.controller:MainCtrl
  * @description
  * # AboutCtrl
  * Controller of the restoremyfaithinhumanityApp
  */
 angular.module('restoremyfaithinhumanityApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('AboutCtrl', function () {
+    });
