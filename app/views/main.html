@@ -1,23 +1,50 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<main class="container left-container" ng-controller="MainCtrl">
+    <div class="row">
+        <section class="sidebar col-md-5 col-sm-12" style="background-image: url(images/default-sidebar.jpg)">
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+            <div class="site-info">
+                <div class="primary-info">
+                    <h1>Uplifting News</h1>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+                    <h3>We will help restore your faith in humanity. </h3>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-</div>
+                    <p>Content from Reddit's <a href="https://www.reddit.com/r/UpliftingNews">/r/UpliftingNews.</a></p>
+                </div>
+            </div>
+        </section>
+        <!-- end sidebar -->
+
+        <section class="col-md-7 col-sm-12 col-md-offset-5 main-content">
+            <div><i class="fa fa-child fa-6" style="font-size: 70px; margin-left: auto; margin-right: auto; width: 100%">&nbsp;&nbsp;<iframe src="https://ghbtns.com/github-btn.html?user=ltalhouarne&type=follow&count=true&size=small"
+                                                                                                                                             frameborder="0" scrolling="0" width="200" height="30px"></iframe></i></div>
+            <br><br>
+            <div class="home-page-posts animated fadeIn ">
+                <div ng-repeat="post in posts">
+                    <article class="post" ng-show="post.data.domain != 'self.UpliftingNews'">
+                        <div class="post-preview col-xs-10  no-gutter">
+                            <h2><a target="_blank" ng-href="{{post.data.url}}">{{post.data.title}}</a></h2>
+                            <p class="meta">
+                                <i class="fa fa-bookmark"></i> Source : {{post.data.domain}} <i
+                                    class="link-spacer"></i>  <i class="fa fa-arrow-up"></i> : {{post.data.ups}}
+                                <i class="link-spacer"></i>
+                                <i class="fa fa-comment-o"></i> : <a target="_blank" ng-href="https://reddit.com/{{post.data.permalink}}">{{post.data.num_comments}}</a>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Home page posts -->
+
+            <footer class="split-footer">
+                <i class="link-spacer"></i>
+                <a href="views/page.html">Client for Reddit - About</a>
+                <i class="link-spacer"></i>
+            </footer>
+
+        </section>
+        <!-- main content -->
+
+    </div>
+    <!--/row -->
+
+</main>
