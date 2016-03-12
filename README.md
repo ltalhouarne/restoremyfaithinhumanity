@@ -1,4 +1,4 @@
-# restoremyfaithinhumanity.com
+# [restoremyfaithinhumanity.com](http://restoremyfaithinhumanity.com/#/)
 
 ![alt](https://github.com/ltalhouarne/restoremyfaithinhumanity/blob/master/img/restore.png)
 
